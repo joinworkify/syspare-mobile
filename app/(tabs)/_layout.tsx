@@ -1,3 +1,4 @@
+// app/(tabs)/_layout.tsx
 import { Tabs } from 'expo-router';
 import React from 'react';
 
@@ -20,16 +21,24 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarStyle: { display: 'none' },
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />, // Show tab bar
         }}
       />
-      <Tabs.Screen
+      {/* <Tabs.Screen
         name="explore"
         options={{
           title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />, // Show tab bar
         }}
-      />
+      /> */}
+      {/* <Tabs.Screen
+        name="modal"
+        options={{
+          title: 'Modal',
+          tabBarStyle: { display: 'none' }, // Hide tab bar for this screen
+        }}
+      /> */}
     </Tabs>
   );
 }
