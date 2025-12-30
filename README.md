@@ -1,50 +1,96 @@
-# Welcome to your Expo app 👋
+# Seinnyaungso
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Seinnyaungso is a mobile application built using [Expo](https://expo.dev) and React Native. It leverages modern tools and libraries to provide a seamless user experience across Android, iOS, and web platforms.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **WebView Integration**: Displays web content directly within the app.
+- **File-based Routing**: Simplifies navigation with Expo Router.
+- **Custom Theming**: Supports light and dark themes.
+- **Haptic Feedback**: Enhances user interaction with haptic responses.
+- **Cross-platform Support**: Runs on Android, iOS, and the web.
 
-   ```bash
-   npm install
-   ```
+## Project Structure
 
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+app/
+  _layout.tsx       # Root layout for the app
+  (tabs)/           # Tab-based navigation
+    _layout.tsx     # Layout for tabs
+    index.tsx       # Home screen with WebView
+assets/             # Static assets like images
+components/         # Reusable UI components
+constants/          # Theme and other constants
+hooks/              # Custom React hooks
+scripts/            # Utility scripts
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Getting Started
 
-## Learn more
+### Prerequisites
 
-To learn more about developing your project with Expo, look at the following resources:
+- Node.js (>=16.x)
+- npm or bun
+- Expo CLI (`npm install -g expo-cli`)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Installation
 
-## Join the community
+1. Clone the repository:
 
-Join our community of developers creating universal apps.
+   ```bash
+   git clone https://github.com/joinworkify/syspare-mobile.git
+   cd syspare-mobile
+   ```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+2. Install dependencies:
+
+   ```bash
+   bun install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   bun start
+   ```
+
+4. Open the app:
+   - Use the Expo Go app on your device.
+   - Or use an Android/iOS simulator.
+
+## Scripts
+
+- `bun run start`: Start the development server.
+- `bun run android`: Run the app on an Android emulator.
+- `bun run ios`: Run the app on an iOS simulator.
+- `bun run web`: Start the app in a web browser.
+- `bun run lint`: Run ESLint to check for code quality.
+- `bun run reset-project`: Reset the project to a blank state.
+
+## Configuration
+
+### EAS Build
+
+This project uses [Expo Application Services (EAS)](https://expo.dev/eas) for building and deploying the app. The build configurations are defined in `eas.json`:
+
+- **Development**: Internal builds for testing.
+- **Preview**: Builds for previewing features.
+- **Production**: Builds for release.
+
+### App Configuration
+
+The app settings are defined in `app.json`:
+
+- **iOS**: Bundle identifier: `com.syspare.seinnyaungso`
+- **Android**: Package name: `com.syspare.seinnyaungso`
+- **Web**: Static output with a custom favicon.
+
+## Learn More
+
+- [Expo Documentation](https://docs.expo.dev/)
+- [React Native Documentation](https://reactnative.dev/)
+- [EAS Build Documentation](https://docs.expo.dev/build/introduction/)
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.

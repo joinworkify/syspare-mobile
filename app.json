@@ -10,7 +10,7 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.hanhtetsan.seinnyaungso",
+      "bundleIdentifier": "com.syspare.seinnyaungso",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
@@ -24,7 +24,7 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.hanhtetsan.seinnyaungso"
+      "package": "com.syspare.seinnyaungso"
     },
     "web": {
       "output": "static",
